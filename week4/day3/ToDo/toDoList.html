@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="toDoList.css">
+    <title>To Do List</title>
+</head>
+<body>
+    <div class="main-container">
+        <h1>To Do List</h1>
+    </div>
+    <h2>Morning Tasks
+    </h2>   
+</body>
+<script>
+    const divOne = document.createElement("div")
+    console.log(divOne)    
+    document.body.appendChild(divOne)
+    divOne.id="firstDiv"
+
+    const grabDivOne = document.querySelector("#firstDiv")
+    const createInput = document.createElement("input")
+    createInput.id = "taskInput"
+    createInput.setAttribute("type","text")
+    grabDivOne.append(createInput)
+
+    const createButton = document.createElement("button")
+    grabDivOne.append(createButton)
+    createButton.id = "button"
+    createButton.textContent = "Add Task!"
+    const createList = document.createElement("ul")
+    createList.id = "firstList"
+    grabDivOne.append(createList)
+    // const listItem = document.createElement("li")
+
+    createButton.addEventListener('click', function(){
+        console.log("Hello")
+        const grabValue = document.querySelector("#taskInput").value
+        createList.append(grabValue)
+        
+    })
+
+    // const inputValue = document.querySelector("#taskButton").nodeValue
+    // createList.append(inputValue)
+
+
+
+
+
+    
+
+</script>
+</html>

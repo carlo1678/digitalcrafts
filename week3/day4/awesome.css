@@ -1,0 +1,29 @@
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 0.2fr 0.5fr 0.75fr 0.5fr 0.2fr;
+}
+
+.awesomeness {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.topColumn {
+  align-items: left;
+  font-family: sans-serif;
+  font-size: 30px;
+}
+
+.awesome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+/* .awesomeness {
+  display: flex;
+  justify-content: center;
+} */

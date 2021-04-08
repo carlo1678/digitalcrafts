@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Exercise</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const createDiv = document.createElement("div")
+    createDiv.className = "main-container"
+    console.log(createDiv)
+
+    const createList = document.createElement("ul")
+    createList.id = "u-list"
+    console.log(createList)
+
+    const createListItem = document.createElement("li")
+    createListItem.innerText = "First Item"
+    console.log(createListItem)
+
+    const createListItem2 = document.createElement("li")
+    createListItem2.innerText = "Second Item"
+    console.log(createListItem2)
+
+    const createListItem3 = document.createElement("li")
+    createListItem3.innerText = "Third Item"
+    console.log(createListItem3)
+
+    const createListItem4 = document.createElement("li")
+    createListItem4.innerText = "Fourth Item"
+    console.log(createListItem4)
+
+    const createListItem5 = document.createElement("li")
+    createListItem5.innerText = "Fifth Item"
+    console.log(createListItem5)
+
+    const createInput = document.createElement("input")
+    console.log(createInput)
+
+    const radioInput = document.createElement("input")
+    radioInput.setAttribute("type","radio")
+   
+
+    createList.append(createListItem, createListItem2, createListItem3, createListItem4, createListItem5)
+
+    createDiv.append(createList)
+    
+
+
+
+
+
+
+
+</script>
+</html>

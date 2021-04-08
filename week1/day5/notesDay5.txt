@@ -1,0 +1,3 @@
+using range you can print a multitude of numbers. for number in range(1,101) will print numbers 1-100.
++= is addition and assignment into one.
+freecodecamp

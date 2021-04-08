@@ -1,0 +1,14 @@
+Dictionaries are also referred to as objects. Variables will stay constant. 
+You define a class with a class, and give it whatever name you want it to have. You stop class with a colon. class needs to be indented underneath. 
+A class lets you model out something and you can define specific things on it, where you can create other instances of that class and use them all over again. 
+When you make a class, you will have access to a "constructor". When you make a class and you make an individual object with that class, you're making an "instance" of that object.
+It's created with what is known as a function called a "constructor". When keys are the same in dictionaries, and we're creating multiple, you should start considering using a class.
+Dot notation is way you refer to values that exist on an object. You can define functions inside of a class that will apply to any instance of that class. Functions defined inside of 
+a class are called methods. 
+Dot notation refers to us using the period (.) and referencing something that exists on the class. (aka the thing we attached self to in Joe's example.)
+
+define global functions and variables first at the top of your program
+define classes next and any unique methods inside of them
+then define your while loop if you need the user to keep doing task until a certain condition is met (remember, your condition needs to be global, and needs to be reassigned inside
+your while loop)
+

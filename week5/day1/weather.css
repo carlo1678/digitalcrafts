@@ -1,0 +1,51 @@
+html {
+  background: url("https://cdn.shopify.com/s/files/1/0847/5984/articles/winter_tips_blog_header_2300x.jpg?v=1608677258")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-family: "Cinzel Decorative", cursive;
+}
+
+#bigDiv {
+  display: grid;
+  place-items: center;
+  margin: auto;
+  height: 40vh;
+  width: 50vh;
+  background-image: linear-gradient(
+    rgb(0, 255, 191),
+    rgba(255, 0, 0, 0.815),
+    orange
+  );
+  border-radius: 3em;
+  border: solid black 4px;
+  margin-top: 5%;
+}
+
+button {
+  border-radius: 4px;
+  background-color: rgb(162, 0, 255);
+  width: 150px;
+  height: 50px;
+}
+
+input {
+  background-color: crimson;
+  border-radius: 10px;
+}
+
+/* .input {
+  display: flex;
+  justify-content: center;
+} */

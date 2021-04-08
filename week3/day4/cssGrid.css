@@ -1,0 +1,69 @@
+/* font-family: 'Syne Mono', monospace; */
+body {
+  background-color: red;
+  font-family: "Syne Mono", monospace;
+}
+
+@media only screen and (max-width: 500px) {
+  .main-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas:
+      "nav"
+      "sidebar"
+      "";
+  }
+}
+
+.main-container {
+  display: grid;
+  height: 100vh;
+  /* template */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+  grid-template-areas:
+    "nav nav nav nav"
+    "sidebar main main main"
+    "sidebar content1 content2 content3"
+    "sidebar footer footer footer";
+  grid-gap: 0.4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+}
+
+#content-div-1 {
+  grid-area: content1;
+  background-color: red;
+}
+
+#content-div-2 {
+  grid-area: content2;
+  background-color: green;
+}
+
+#content-div-3 {
+  grid-area: content3;
+  background-color: blue;
+}
+#sidebar {
+  grid-area: sidebar;
+  background-color: purple;
+}
+
+nav {
+  grid-area: nav;
+  background-color: yellow;
+}
+
+footer {
+  grid-area: footer;
+  background-color: pink;
+}
+
+main {
+  grid-area: main;
+  color: red;
+  background-color: black;
+}

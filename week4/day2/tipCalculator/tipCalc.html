@@ -1,0 +1,67 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tipCalc.css">
+    <title>Tip Calculator</title>
+</head>
+<body>
+<div class="titleDiv">
+    <form id="formOne">
+        <h1>Tip Calculator</h1>
+        <h2>Total Bill Amount</h2>
+        <input class="userInputOne" id="totalAmt" type="text">
+        <h2>Percentage of Tip</h2>
+        <input class="userInputTwo" id="tipPct" type="text">
+            <div class="buttonDiv">
+                <button class="calculate" id="submit">Calculate!</button>
+            </div>
+        <h1>Total Amount With Tip: $<span class="total"></span></h1>
+        <h1>Previous Tip Amount: %</h1>   
+        <ul class="prevTips"> </ul>
+    </form>   
+    </div>       
+</body>
+<script>    
+    function calcTip(){
+        const grabBillAmt = document.getElementById("totalAmt").value
+        console.log(grabBillAmt)
+        const grabTipPct = document.getElementById("tipPct").value
+        console.log(grabTipPct)
+        const tipDecimal = Number(grabTipPct)/100
+        const tipAmount = tipDecimal*Number(grabBillAmt)
+        const calculate = tipAmount + Number(grabBillAmt)
+        console.log(calculate)
+        const totalAmt = document.querySelector(".total")
+        totalAmt.innerText = calculate
+        const grabList = document.querySelector(".prevTips")
+        const createList = document.createElement("li")
+        createList.innerText = tipAmount
+        grabList.append(createList)
+    }
+
+
+    const grabForm = document.querySelector("form");
+    const validateInput = (numbers) => {
+        regexOne = /^[0-9]+$/
+        return regexOne.test(numbers)
+        
+        }
+
+    
+    grabForm.addEventListener("submit", (event) => {
+        event.preventDefault()
+        const totalInput = document.querySelector("#totalAmt")
+        console.log(totalInput.value)
+        const tipInput = document.querySelector("#tipPct")
+        console.log(tipInput.value)
+        if (!validateInput(totalInput.value) || !validateInput(tipInput.value)) {
+            alert("Please enter in a number!")
+        }
+        else {calcTip()}
+})
+
+</script>
+</html>

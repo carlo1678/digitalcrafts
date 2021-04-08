@@ -1,0 +1,7 @@
+Separate files for Classes of characters, classes of weapons for said characters, main file can be logic for the game  (actual interactions and whatnot)
+Zach = Project Manager
+Carlo = Assistant to the Project Manager
+
+The Goonies
+
+do a git clone, paste the link we created from github

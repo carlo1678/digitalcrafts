@@ -1,0 +1,12 @@
+h1 {
+  color: blue;
+}
+.dateOfBirth {
+  color: red;
+}
+.firstName {
+  color: seagreen;
+}
+body {
+  background-color: rgb(61, 37, 216);
+}

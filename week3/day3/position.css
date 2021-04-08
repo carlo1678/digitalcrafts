@@ -1,0 +1,18 @@
+/* Themes and stuff like that can be kept in a general CSS file, individual pages that have unique and individual CSS should have their own CSS file. That is Joe's preference.*/
+.position-container {
+  position: relative;
+  left: 100px;
+}
+.second-position-container {
+  position: absolute;
+  bottom: -100px;
+}
+
+.inbetween-container {
+  position: fixed;
+  bottom: 50px;
+  left: 300px;
+}
+ .inbetween-container {
+   border
+ }

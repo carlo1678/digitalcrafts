@@ -1,0 +1,3 @@
+Hello Git
+Adding text
+Becoming a developer

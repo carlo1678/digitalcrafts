@@ -1,0 +1,55 @@
+.image1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  height: 125px;
+}
+
+#bar {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 450px;
+  border-radius: 20px;
+}
+
+#searchButton {
+  background-color: transparent;
+  font-size: 12px;
+  width: 175px;
+  height: 30px;
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#luckyButton {
+  background-color: transparent;
+  font-size: 12px;
+  width: 175px;
+  height: 30px;
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clickMe {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+#container {
+  text-align: center;
+}
+
+#center {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}

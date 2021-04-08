@@ -1,0 +1,55 @@
+#main-container-one {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+}
+
+.peopleHolder {
+  color: antiquewhite;
+  text-align: center;
+  background-color: #5885af;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  padding: 45px;
+  height: 120px;
+  width: 200px;
+}
+
+.bookHolder {
+  color: antiquewhite;
+  text-align: center;
+  background-color: #5885af;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  padding: 45px;
+  height: 120px;
+  width: 200px;
+}
+
+.bookContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+html {
+  background: url("https://getwallpapers.com/wallpaper/full/8/9/0/470556.jpg");
+  background-size: 100%;
+}
+
+body {
+  color: blue;
+}
