@@ -1,0 +1,42 @@
+body {
+  min-height: 50rem;
+  padding-top: 4.5rem;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+}
+
+h6 {
+  display: flex;
+  justify-content: center;
+}
+
+.message-container {
+  display: flex;
+  justify-content: center;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+}
+
+.card-text1 {
+  text-orientation: sideways;
+}
+
+p {
+  text-align: center;
+}

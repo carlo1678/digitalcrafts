@@ -26,7 +26,6 @@ const apiPull = async () => {
     }
        return json
 } 
-
     // grabCard = [cardElemets <div>]
     // for (let index = 0; index < grabCardArray.length; index++) {
 
