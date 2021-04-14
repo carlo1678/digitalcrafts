@@ -1,6 +1,3 @@
-const grabInput = document.querySelector(".searchButton")
-const userInput = grabInput.nodeValue
-grabInput.addEventListener("click", () => {apiPull()})
 
 
 const apiPull = async (userInput) => {
