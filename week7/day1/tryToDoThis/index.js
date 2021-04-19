@@ -1,8 +1,12 @@
 const express = require("express");
 const app = express();
-const { readFile, read } = require("fs");
+const {readFile} = require("fs");
 
 const PORT = 3005;
+
+app.use(express.json())
+// middleware
+
 
 // routes
 // 1 Default page aka / *
@@ -41,10 +45,14 @@ app.get("/click", (req, res) => {
 });
 
 
-// app.post("/messages", (req, res) => {
-//   const message = "Post a message";
-//   res.send(message);
-// });
+app.post("/messages", (req, res) => {
+console.log(req)
+    const {logo} = req.body
+
+//   const message = `Your logo is ${logo} and your name is ${name}.`;
+  res.send(message);
+});
+
 
 // app.get("*", (req, res) => {
 //   const message = "Uh oh, this page is not real 🤭";
