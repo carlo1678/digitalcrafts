@@ -3,6 +3,7 @@ const app = express();
 const cors = require("cors");
 const port = process.env.PORT || 3050;
 const pool = require("./db.js");
+const {readFile} = require("fs")
 
 //middleware
 app.use(express.json());
@@ -75,20 +76,6 @@ app.delete("/delete_info/:id", async (req,res) => {
         console.error(err)
     }
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 app.listen(port, () => {
     console.log(`listening on port ${port}`);
