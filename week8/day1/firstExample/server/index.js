@@ -3,7 +3,7 @@ const app = express();
 const cors = require("cors");
 const port = process.env.PORT || 3050;
 const pool = require("./db.js");
-const {readFile} = require("fs")
+
 
 //middleware
 app.use(express.json());
