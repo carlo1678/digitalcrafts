@@ -8,24 +8,32 @@
 </head>
 <body>
     <h1>Info!</h1>
-<form action="submit" method="POST">
-    First Name: <input type="submit">
-    Last Name: <input type="submit">
-    City: <input type="submit">
-    Birth Year: <input type="submit">
-    <button>Submit!</button>
-</form>
+    <p>First Name: <input type="text" class="fname"></p>
+    <p>Last Name: <input type="text" class="lname"></p>
+    <p>City: <input type="text" class="city"></p>
+    <p>Birth Year: <input type="text" class="year"></p>
+    <button type="submit" onclick="sendDataToDB()">Submit!</button>
 </body>
 <script>
-    const sendInfo = (e) => {
+    const sendDataToDB = async () => {
+        const firstName = document.querySelector(".fname").value
+        const lastName = document.querySelector(".lname").value
+        const city = document.querySelector(".city").value
+        const year = document.querySelector(".year").value
+        const combinedData = {
+            firstname:firstName,
+            lastname:lastName,
+            city:city,
+            birthyear:year,
+        }    
         const infoToSend = await fetch("http://localhost:3075/",
         {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json'
         },
-        body:{}
+        body: JSON.stringify(combinedData)
         })
-    }
+        }
 </script>
 </html>

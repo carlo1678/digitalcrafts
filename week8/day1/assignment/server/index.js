@@ -1,9 +1,10 @@
 const express = require("express");
-const app = express();
 const cors = require("cors");
+const app = express();
 const port = process.env.PORT || 3075;
-const es6Renderer = require("express-es6-template-engine")
 const pool = require("./db.js");
+const es6Renderer = require("express-es6-template-engine")
+
 
 //middleware
 app.use(express.json());
@@ -17,24 +18,33 @@ app.get("/", (req, res) => {
   }); 
 
 app.post("/", async (req,res) =>{
+    const {firstname, lastname, city, birthyear} = req.body;
     try {
-        res.render("peopleInfo")
-        const {FirstName} = req.body;
-        const {LastName} = req.body;
-        const {City} = req.body;
-        const {BirthYear} = req.body
-        const newItemsInDB = await pool.query(
-            "INSERT INTO crudtable (FirstName,LastName,City,BirthYear) VALUES($1,$2,$3,$4)"
-            [FirstName]
-            [LastName]
-            [City]
-            [BirthYear]
+        const sendToDB = await pool.query(
+            "INSERT INTO crudtable (firstname,lastname,city,birthyear) VALUES($1,$2,$3,$4)",
+            [firstname, lastname, city, birthyear]
         )
+        res.status(200).send("Info has been updated!")
     } catch (err) {
         console.error(err.message)
     }
-    
 })
+
+app.get("/person/:id", async (req,res) => {
+    try {
+        const {id} = req.params
+        const readSpecificPersonFromDB = await pool.query(
+            "SELECT * from crudtable WHERE example_id = ($1)",
+            [id]
+        );
+        const personInfo = readSpecificPersonFromDB.rows
+        res.send(readSpecificPersonFromDB.rows)
+        // console.log(readSpecificPersonFromDB.rows[0].firstname)
+    } catch (err) {
+        console.error(err.message)
+    }   
+})
+
 
 app.listen(port, () => {
     console.log(`listening on port ${port}`);
