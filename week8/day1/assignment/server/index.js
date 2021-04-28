@@ -38,7 +38,13 @@ app.get("/person/:id", async (req,res) => {
             [id]
         );
         const personInfo = readSpecificPersonFromDB.rows
-        res.send(readSpecificPersonFromDB.rows)
+        console.log(readSpecificPersonFromDB.rows)
+        res.render("specificPeople", {
+            locals: {
+                personInfo
+            }
+        })
+        // res.send(readSpecificPersonFromDB.rows)
         // console.log(readSpecificPersonFromDB.rows[0].firstname)
     } catch (err) {
         console.error(err.message)

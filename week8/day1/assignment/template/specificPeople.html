@@ -8,9 +8,17 @@
 </head>
 <body>
     <h1>View Identity</h1>
-    <p>Name</p>
-    <p>${personInfo.firstname}</p>
+<dl>
+    ${personInfo.map(personInfo => 
+        `<p>Name</p>
+    <dt>${personInfo.firstname}<dt>
     <p>Last Name</p>
-    <p>${personInfo.lastname}</p>
+    <dt>${personInfo.lastname}<dt>
+    <p>Birth Year</p>
+    <dt>${personInfo.birthyear}</dt>
+    `
+    ).join("")}
+    
+</dl>
 </body>
 </html>
