@@ -38,7 +38,6 @@ app.get("/person/:id", async (req,res) => {
             [id]
         );
         const personInfo = readSpecificPersonFromDB.rows
-        console.log(readSpecificPersonFromDB.rows)
         res.render("specificPeople", {
             locals: {
                 personInfo
