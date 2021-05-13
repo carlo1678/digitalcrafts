@@ -3,7 +3,11 @@ import AboutMe from "./AboutMe";
 
 class AboutContainer extends Component {
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <AboutMe />
+      </div>
+    );
   }
 }
 

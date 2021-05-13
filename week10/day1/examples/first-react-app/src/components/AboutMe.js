@@ -4,7 +4,7 @@ class AboutMe extends Component {
   render() {
     return (
       <div>
-        <p>About Me</p>
+        <p className="heading2"></p>
       </div>
     );
   }

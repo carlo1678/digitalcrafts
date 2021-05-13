@@ -1,5 +1,5 @@
 body {
-  background-image: linear-gradient(to left, blue, red);
+  background-color: #0c1446;
 }
 
 .App {
@@ -11,12 +11,28 @@ body {
   font-family: "Montserrat", sans-serif;
   display: flex;
   justify-content: center;
+  color: #87aca3;
+  font-weight: bold;
+}
+
+.heading1 {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  color: #87aca3;
+}
+
+.heading2 {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  color: #87aca3;
 }
 
 .image {
   display: flex;
   margin: auto;
   border-radius: 800px;
-  height: 300px;
-  width: 250px;
+  height: 250px;
+  width: 300px;
 }
