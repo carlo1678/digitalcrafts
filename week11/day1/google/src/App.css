@@ -1,0 +1,137 @@
+.topItems {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  font-family: arial, sans-serif;
+  margin-left: -7px;
+}
+
+.about {
+  padding-right: 10px;
+}
+
+.store {
+  padding-left: 10px;
+}
+
+.gmail {
+  padding-left: 1600px;
+}
+
+.images {
+  padding-left: 50px;
+}
+
+.google {
+  padding-left: 10px;
+}
+
+.googleLogo {
+  display: flex;
+  justify-content: center;
+  padding-top: 175px;
+}
+
+.inputBar {
+  display: flex;
+  justify-content: center;
+}
+
+.search {
+  width: 500px;
+  height: 30px;
+  border-radius: 40px;
+  border-style: inset;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.searchButton {
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  margin: 11px 4px;
+  padding: 0 16px;
+  line-height: 27px;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.luckyButton {
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  margin: 11px 4px;
+  padding: 0 16px;
+  line-height: 27px;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.footer {
+  color: #70757a;
+  font-size: 14px;
+  font-family: arial, sans-serif;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  height: 7px;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgb(241, 241, 238);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.bottomItems {
+  list-style: none;
+}
+
+.itemOne {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  font-family: arial, sans-serif;
+  padding-right: 30px;
+}
+
+.itemThree {
+  padding-left: 30px;
+}
+
+.itemFour {
+  margin: auto;
+  padding-right: 100px;
+}
+
+.itemFive {
+  padding-right: 30px;
+}
+
+.itemSix {
+  padding-right: 30px;
+}
+
+.itemSeven {
+  padding-right: 30px;
+}
