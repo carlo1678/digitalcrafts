@@ -58,15 +58,6 @@ class CardContainer extends Component {
 
     render() {       
         const filteredData = this.state.pokemonList.filter(pokemon => pokemon.name.includes(this.state.searchCriteria)) ? this.state.pokemonList.filter(pokemon => pokemon.name.includes(this.state.searchCriteria)) :this.state.pokemonList
-
-        
-
-        
-        
-
-        
-
-        
         return (
             <div className="main-card-container">
                 <div>
