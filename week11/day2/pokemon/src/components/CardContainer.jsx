@@ -9,19 +9,15 @@ class CardContainer extends Component {
         pokeName: "",
         pokeHP: "",
         frontURL: "",
-        backURL: ""
+        backURL: "",
+        pokemonList: []
     }
 
-    async componentDidMount() {
-      const berryUrl = "https://pokeapi.co/api/v2/berry/"
-       const fetchData = await fetch(berryUrl,{ headers: {
-      'Content-Type': 'application/json'
-      
-    },})
-    const json = await fetchData.json()
-    this.setState({
-        pokemonBerries:json.results
-    })
+    componentDidMount() {
+      this.setState({
+        pokemonList: this.props.pokemonData[0].pokemon
+      })
+      console.log(this.state.pokemonList)
    }
    
    searchCriteria = (event) =>{
@@ -29,22 +25,41 @@ class CardContainer extends Component {
     
            this.setState({
                searchCriteria:search
-           })
+           })  
+   }
 
+   handlePokeData = (event) => {
+       this.setState({
+           [event.target.name]: event.target.value
+       })
+       event.preventDefault();
+      
+       
+   }
+
+   handleSubmitData = async (e) => {
+       const newPokemon = { 
+           name: this.state.pokeName,
+           hp: this.state.pokeHP,
+           sprites: {
+               front: this.state.frontURL,
+               back: this.state.backURL
+           }
+        }
+
+        this.setState({
+            pokemonList: [newPokemon, ...this.state.pokemonList]
+        })
+       e.preventDefault();
        
    }
 
    
 
-    render() {
-        
-        const {pokemonData} = this.props
-        
-        const filteredData = pokemonData[0].pokemon.filter(pokemon => pokemon.name.includes(this.state.searchCriteria)) ? pokemonData[0].pokemon.filter(pokemon => pokemon.name.includes(this.state.searchCriteria)) :pokemonData[0].pokemon
+    render() {       
+        const filteredData = this.state.pokemonList.filter(pokemon => pokemon.name.includes(this.state.searchCriteria)) ? this.state.pokemonList.filter(pokemon => pokemon.name.includes(this.state.searchCriteria)) :this.state.pokemonList
 
-        const getInfo = (event) => {
-            console.log(event.target.value) 
-          }
+        
 
         
         
@@ -60,11 +75,11 @@ class CardContainer extends Component {
                 </div>
                 
                 <div>
-                    <form type="submit">
-                        <input onChange={getInfo} className="create-field" type="text" name="pokeName" placeholder="Enter a Name"/>
-                        <input onChange={getInfo} className="create-field" type="text" name="pokeHP" placeholder="Enter a HP"/>
-                        <input onChange={getInfo} className="create-field" type="text" name="frontURL" placeholder="Enter front URL"/>
-                        <input onChange={getInfo} className="create-field" type="text" name="backURL" placeholder="Enter back URL"/>
+                    <form className="pokeForm" onSubmit={this.handleSubmitData}>
+                        <input className="create-field" type="text" name="pokeName" placeholder="Enter a Name" value={this.state.pokeName} onChange={this.handlePokeData}/>
+                        <input className="create-field" type="text" name="pokeHP" placeholder="Enter a HP" value={this.state.pokeHP} onChange={this.handlePokeData}/>
+                        <input className="create-field" type="text" name="frontURL" placeholder="Enter front URL" value={this.state.frontURL} onChange={this.handlePokeData}/>
+                        <input className="create-field" type="text" name="backURL" placeholder="Enter back URL" value={this.state.backURL} onChange={this.handlePokeData}/>
                         <button className="create-button">Create</button>
                     </form>
                 </div>
