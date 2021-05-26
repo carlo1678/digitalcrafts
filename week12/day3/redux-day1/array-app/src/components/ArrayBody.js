@@ -8,8 +8,11 @@ export default function ArrayBody() {
 
   return (
     <div>
-      {varOne.map((varName) => (
-        <p>{varName.name}</p>
+      {varOne.map((varName, index) => (
+        <li key={index}>
+          {varName.name}
+          {varName.name2}
+        </li>
       ))}
       <button onClick={() => dispatch({ type: "SWITCH_VAR_ONE" })}>
         Pass it!

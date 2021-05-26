@@ -7,7 +7,7 @@ function rootReducer(state = initialState, action) {
     case "SWITCH_VAR_ONE":
       return {
         ...state,
-        varOne: [...state.varOne, { name: "Joe" }, { name: "Mikael" }],
+        varOne: [...state.varOne, { name: "Joe" }, { name2: "Mikael" }],
       };
     default:
       return state;
