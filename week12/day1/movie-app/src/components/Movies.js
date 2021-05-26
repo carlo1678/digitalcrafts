@@ -3,8 +3,8 @@ import React from "react";
 export default function Movies(props) {
   return (
     <div>
-      <h1>Movie!</h1>
-      <p>{props.movie}</p>
+      <p className="title">{props.Title}</p>
+      <img src={props.Poster} alt=""></img>
     </div>
   );
 }
