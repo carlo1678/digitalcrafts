@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { insertArray } from "../actions/arrayActions";
 
 export default function ArrayBody() {
   const varOne = useSelector((state) => state.varOne);
@@ -14,9 +15,7 @@ export default function ArrayBody() {
           {varName.name2}
         </li>
       ))}
-      <button onClick={() => dispatch({ type: "SWITCH_VAR_ONE" })}>
-        Pass it!
-      </button>
+      <button onClick={() => insertArray(dispatch)}>Pass it!</button>
     </div>
   );
 }
