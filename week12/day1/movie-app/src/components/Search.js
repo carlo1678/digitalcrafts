@@ -14,7 +14,7 @@ export default function Search() {
       }
     );
     const json = await response.json();
-    console.log(json.Search);
+
     setMovies(json.Search);
   };
 
