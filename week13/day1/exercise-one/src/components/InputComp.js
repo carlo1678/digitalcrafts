@@ -7,7 +7,7 @@ export default function InputComp() {
   const dispatch = useDispatch();
   const userName = useSelector((state) => state.userName);
   const email = useSelector((state) => state.email);
-  console.log(useSelector((state) => state));
+
   return (
     <div>
       <h1>Hello! Welcome to my App!</h1>
